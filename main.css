@@ -85,7 +85,7 @@ p {
 
 /* Same layout for the page with the gradient background to differentiate the sections */
 .background{
-  background-image: linear-gradient(to right, #eccaff, #afb1ff);
+  background-image: linear-gradient(120deg, #eccaff 14%, #c7bbff 56%, #afb1ff 89%);
 }
 /* ===== Navigation Bar ===== */
 ul.navbar {
@@ -142,7 +142,7 @@ ul.navbar li a:hover {
 .card-list-contact {
   display: grid;
   grid-template-columns: 1fr 1fr 3fr; /* Longer 3rd column for spotify embed widget */
-  gap: 80px;
+  gap: 40px;
   margin-top: 8px;
 }
 
@@ -160,7 +160,7 @@ ul.navbar li a:hover {
   align-items: center;
   justify-content: center;
   width: 100%;
-  height: 100px;
+  height: 60px;
   border-radius: 25px;
 }
 
@@ -177,7 +177,7 @@ ul.navbar li a:hover {
   align-items: center;
   justify-content: center;
   width: 80%;
-  height: 100px;
+  height: 60px;
   margin-top: 12px;
 }
 /* ===== Collapsible Sections (adapted from Jordan Finners) ===== */

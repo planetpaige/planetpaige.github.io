@@ -8,28 +8,44 @@
 
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="author" content="Paige Townsend">
-    <meta name="description" content="Paige Townsend's Portfolio">
+    <meta name="description" content="Paige Townsend's Portfolio: UX research and design, accessibility, and HCI at UC Irvine.">
+
+    <!-- Open Graph tags for link previews (LinkedIn, Slack, etc.) -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Paige Townsend">
+    <meta property="og:description" content="UX research and design, accessibility, and HCI at UC Irvine.">
+    <meta property="og:url" content="https://paige-townsend.com">
+    <meta property="og:image" content="https://paige-townsend.com/assets/headshot.jpg">
+
+    <!-- Favicon: add a file at this path, then uncomment -->
+    <!-- <link rel="icon" href="assets/favicon.png"> -->
+
     <link rel="stylesheet" href="main.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
     <title>Paige Townsend</title>
-  </head>
 
-  <script src="https://kit.fontawesome.com/1f5b5975f9.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/1f5b5975f9.js" crossorigin="anonymous"></script>
+
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-5ENTYJ0DEJ"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-    
+
       gtag('config', 'G-5ENTYJ0DEJ');
     </script>
+  </head>
 
   <body>
-    
+
+    <!-- Skip link for keyboard and screen reader users -->
+    <a href="#main" class="skip-link">Skip to main content</a>
+
     <!-- HEADER SECTION: Introduction with headshot and name -->
     <header class="content background" id="home">
 
@@ -38,18 +54,22 @@
       <div class="content-text">
 
         <!-- Introductory text content -->
-        <p class="intro">Hello, I'm Paige Townsend!</p>
-        <p class="sub-intro">3rd year Informatics major at UC Irvine specializing in HCI.</p>
+        <h1 class="intro">Hello, I'm Paige Townsend!</h1>
+        <p class="sub-intro">4th year Informatics major at UC Irvine specializing in HCI.</p>
       </div>
     </header>
 
     <!-- NAVIGATION BAR: Main site navigation with anchor links to different sections -->
-    <ul class="navbar">
-      <li><a href="#home">Home</a></li>
-      <li><a href="#about-me">About Me</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#experience">Experience</a></li>
-    </ul>
+    <nav aria-label="Main">
+      <ul class="navbar">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#connect">Connect</a></li>
+      </ul>
+    </nav>
+
+    <main id="main">
 
     <!-- ABOUT ME SECTION: Personal background and interests -->
     <div class="content" id="about-me">
@@ -57,11 +77,13 @@
         <h2>About Me!</h2>
 
         <!-- Bio paragraph with academic focus -->
-        <p> My name is Paige. I am currently a 3rd year Informatics major at UC Irvine specializing in HCI.
-        I love learning about user experience design and web development! I am particularly interested in creating accessible and inclusive digital experiences.<br>
-        <br>Through both researching with Professor Stacy Branham and Professor Jennifer Wong-ma with <a href="https://www.insite.uci.edu/">INsite Lab</a> 
-        as well as working as a Digital Accessibilty Project Manager with <a href="https://www.dash.uci.edu/">DASH (Digital Accessibility Support and Help)</a>
-        has offered me plenty of oppurtunities to learn about WCAG principles, ADA regulations, and inclusive design practices.<br> </p>
+        <p>I'm a 4th year Informatics major at UC Irvine specializing in HCI.
+        I love learning about user experience design and web development, and I'm particularly interested in creating accessible and inclusive digital experiences.<br>
+        <br>Researching with Professor Stacy Branham and Professor Jennifer Wong-ma at <a href="https://www.insite.uci.edu/">INsite Lab</a>
+        and working as a Digital Accessibility Supervisor with <a href="https://www.dash.uci.edu/">DASH (Digital Accessibility Support and Help)</a>
+        has given me plenty of opportunities to learn about WCAG principles, ADA regulations, and inclusive design practices.<br>
+        <br>Outside of academics, I enjoy musical theatre, collecting Legos and Peach Riot figures, and traveling with friends and family. I have spent a lot of time
+        exploring new interests through my positions in Hack at UCI and VenusHacks as well as various radio experiences with KUCI.</p>
         </div>
 
         <!-- Personal photo with rounded corners -->
@@ -69,83 +91,81 @@
     </div>
 
     <!-- PROJECTS SECTION: Showcase of academic and hackathon projects -->
-     <!-- TODO: Make the projects clickable to a new page where I can show the actual work and -->
     <div class="content background" id="projects">
       <div class="content-header">
         <h2>Projects</h2>
         <div class="container">
           <div class="card-list">
 
-        <!-- Card layout pattern adapted from W3Schools
-        https://www.w3schools.com/howto/howto_css_cards.asp -->
+          <!-- Card layout pattern adapted from W3Schools
+          https://www.w3schools.com/howto/howto_css_cards.asp -->
 
-            <div class="card">
-
-              <!-- INsite -->
-              <img src="assets/clarityCoach.png" alt="Clarity Coach Dashboard Screenshot" style="width:100%; border-radius:25px 25px 0px 0px;">
-              <div class="container">
-                <p class="projects-title">Clarity Coach</p>
-                <p class="projects-position">UX Research and Design | UCI Interdisciplinary Research Fellowship  | Aug 2025 - Current</p>
-                <p>Clarity Coach is a professor facing tool designed to identify and flag inaccessible language used during lectures, supporting blind and remote students.</p>
-                <p><a href="https://www.figma.com/board/oqiO2zHHp0JpwL2ldKrJ5r/Deixis-Coach?node-id=0-1&t=U59V9UWFrGVqXrkD-1">Case Study</a></p>
-                <p><a href="https://www.figma.com/proto/F1HiDMlABXjYkNx8UR2jrg/Clarity-Coach?page-id=629%3A953&node-id=669-2296&viewport=55%2C402%2C0.33&t=U3np640oD6qfCajJ-1&scaling=min-zoom&content-scaling=fixed">Prototype</a></p>
+            <!-- Clarity Coach -->
+              <div class="card">
+                <img src="assets/diectic-dashboard.png" alt="Screenshot of the Clarity Coach dashboard" class="card-image">
+                <div class="container">
+                  <p class="projects-title">Clarity Coach</p>
+                  <p class="projects-position">UX Research and Design | UCI Interdisciplinary Research Fellowship | Aug 2025 - Present</p>
+                  <p>A professor-facing accessibility tool that detects and flags inaccessible language in real time, helping instructors communicate more clearly and supporting blind and remote students through more inclusive lecture delivery.</p>
+                  <p><a href="https://www.figma.com/board/oqiO2zHHp0JpwL2ldKrJ5r/Deixis-Coach?node-id=0-1&amp;t=U59V9UWFrGVqXrkD-1" target="_blank" rel="noopener noreferrer" aria-label="Clarity Coach case study (opens in new tab)">Case Study</a></p>
+                  <p><a href="https://www.figma.com/proto/F1HiDMlABXjYkNx8UR2jrg/Clarity-Coach?node-id=417-1359&amp;viewport=41%2C558%2C0.22&amp;t=3ofT7S9hxzV4hXO9-1&amp;scaling=scale-down&amp;content-scaling=fixed&amp;starting-point-node-id=110%3A398&amp;page-id=110%3A196" target="_blank" rel="noopener noreferrer" aria-label="Clarity Coach prototype (opens in new tab)">Prototype</a></p>
+                </div>
               </div>
-            </div>
-            <div class="card">
 
-              <!-- FIP -->
-              <img src="assets/Kain_Na.png" alt="Kain Na! Home page" style="width:100%; border-radius:25px 25px 0px 0px;">
-              <div class="container">
-                <p class="projects-title">Kain Na!</p>
-                <p class="projects-position">UX Designer | FUSION ICS Project | Dec 2025 - Current</p>
-                <p>Kain na! is a community-driven Filipino recipe platform that shares authentic dishes alongside the family stories, cultural traditions, and ingredient guides that bring each recipe to life for cooks anywhere in the world.</p>
-                <p><a href="https://www.figma.com/deck/w6DaH4wt4YkGxe5bf6QJYV/Kain-Na--Presentation?node-id=6-32&viewport=-1799%2C-45%2C0.4&t=5xOuUNlxIeRMLDrU-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1">Overview</a></p>
-                <p><a href="https://www.figma.com/proto/R93Pp2tPRmpJus8pnzFDrz/Kain-Na--Design-Files?node-id=709-1474&viewport=231%2C592%2C0.02&t=SmYgoCjK8ETeaWzK-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=701%3A828&page-id=6%3A21">Prototype</a></p>
+            <!-- Kain Na! -->
+              <div class="card">
+                <img src="assets/Kain_Na.png" alt="Screenshot of the Kain Na! home page" class="card-image">
+                <div class="container">
+                  <p class="projects-title">Kain Na!</p>
+                  <p class="projects-position">UX Designer | FUSION ICS Project | Dec 2025 - May 2026</p>
+                  <p>A community-driven Filipino recipe platform that celebrates cultural heritage through food, pairing authentic dishes with family stories, regional context, and ingredient guidance to make traditional cooking accessible to home chefs everywhere.</p>
+                  <p><a href="https://www.figma.com/deck/w6DaH4wt4YkGxe5bf6QJYV/Kain-Na--Presentation?node-id=6-32&amp;viewport=-1799%2C-45%2C0.4&amp;t=5xOuUNlxIeRMLDrU-1&amp;scaling=min-zoom&amp;content-scaling=fixed&amp;page-id=0%3A1" target="_blank" rel="noopener noreferrer" aria-label="Kain Na! overview (opens in new tab)">Overview</a></p>
+                  <p><a href="https://www.figma.com/proto/R93Pp2tPRmpJus8pnzFDrz/Kain-Na--Design-Files?node-id=709-1474&amp;viewport=231%2C592%2C0.02&amp;t=SmYgoCjK8ETeaWzK-1&amp;scaling=scale-down&amp;content-scaling=fixed&amp;starting-point-node-id=701%3A828&amp;page-id=6%3A21" target="_blank" rel="noopener noreferrer" aria-label="Kain Na! prototype (opens in new tab)">Prototype</a></p>
+                </div>
               </div>
-            </div>
 
-            <div class="card">
-
-              <!-- INF 131 -->
-              <img src="assets/quizlet-redesign.png" alt="INF 131 Project Screenshot" style="width:100%; border-radius:25px 25px 0px 0px;">
-              <div class="container">
-                <p class="projects-title">Quizlet Redesign - Student Verification Feature</p>
-                <p class="projects-position">INF 131: Human-Centered Design | Winter 2024</p>
-                <p>A redesign of Quizlet which adds a student verification feature to the search functionality, enabling users to find accurate study sets more quickly through a more efficient and user centered experience.</p>
-                <p><a href="https://www.figma.com/deck/m8fT7vc6JiwUXCm7RD6CeD/Quizlet-Case-Study?node-id=0-20&viewport=-79%2C-45%2C0.4&t=eyAaJO1FFXydu7m2-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1">Case Study</a></p>
-                <p><a href="https://www.figma.com/proto/7g7rc0kI0gEINCjQ0iuztb/Quizlet-Interface-Design?node-id=46-266&viewport=25%2C302%2C0.11&t=IuMQKnRGBcJn4o1F-1&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=46%3A266&page-id=1%3A3">Prototype</a></p>
+            <!-- Quizlet Redesign -->
+              <div class="card">
+                <img src="assets/quizlet-redesign.png" alt="Screenshot of the Quizlet redesign with the student verification feature" class="card-image">
+                <div class="container">
+                  <p class="projects-title">Quizlet Redesign - Student Verification Feature</p>
+                  <p class="projects-position">INF 131: Human-Centered Design | Winter 2024</p>
+                  <p>A reimagined Quizlet experience that introduces a student verification layer to elevate credible study sets, strengthen trust in search results, and create a more efficient, reliable path for learners to find accurate content.</p>
+                  <p><a href="https://www.figma.com/deck/m8fT7vc6JiwUXCm7RD6CeD/Quizlet-Case-Study?node-id=0-20&amp;viewport=-79%2C-45%2C0.4&amp;t=eyAaJO1FFXydu7m2-1&amp;scaling=min-zoom&amp;content-scaling=fixed&amp;page-id=0%3A1" target="_blank" rel="noopener noreferrer" aria-label="Quizlet Redesign - Student Verification Feature case study (opens in new tab)">Case Study</a></p>
+                  <p><a href="https://www.figma.com/proto/7g7rc0kI0gEINCjQ0iuztb/Quizlet-Interface-Design?node-id=46-266&amp;viewport=25%2C302%2C0.11&amp;t=IuMQKnRGBcJn4o1F-1&amp;scaling=min-zoom&amp;content-scaling=fixed&amp;starting-point-node-id=46%3A266&amp;page-id=1%3A3" target="_blank" rel="noopener noreferrer" aria-label="Quizlet Redesign - Student Verification Feature prototype (opens in new tab)">Prototype</a></p>
+                </div>
               </div>
-            </div>
+
           </div>
         </div>
       </div>
     </div>
 
-    <!-- EXPERIENCE SECTION: Professional and extracurricular experiences -->
+    <!-- EXPERIENCE SECTION: Selected experience (full history is in the resume) -->
     <div class="content" id="experience">
       <div class="content-header">
-        <h2>Experience</h2>
+        <h2>Selected Experience</h2>
 
         <!-- Resume download link -->
-        <p style="color:rgb(112, 18, 199); font-size: 25px;"><a href="assets/Paige_Townsend_Resume.pdf">View my resume</a></p>
+        <p class="resume-link"><a href="assets/paige-townsend-resume.pdf">View my full resume (PDF)</a></p>
         <div class="experience">
 
           <!-- Experience 1 -->
           <div class="experience-row">
             <details class="details experience-text">
               <summary class="summary">
-                Digital Accessibility Support and Help (DASH)
+                UC Irvine Department of Informatics
               </summary>
               <div class="experience-open">
-                <p class="experience-position">Digital Accessibility  (Consultant → Supervisor → Project Manager) | Sept 2025 - Present</p>
+                <p class="experience-position">SWE 121 Grader | Sept 2026 - Present</p>
                 <div class="experience-description">
                   <ul>
-                    <li>Lead and mentor a team of 10+ consultants, setting the standard for WCAG-aligned remediation across 42 courses and 44 faculty members.</li>
-                    <li>Coordinate 156 consultation sessions supporting 133 faculty members, scoping requests and prioritizing workload across the team.</li>
-                    <li>Support faculty trainings on YuJa Panorama and accessibility workflows (assisting with Q&A and hands-on practice) to improve adoption of inclusive teaching practices</li>
+                    <li>Grade multi-week application design deliverables for 77 students, applying structured rubrics across homework, design studio projects, and exams</li>
+                    <li>Collaborate weekly with the course TA and fellow readers to align grading rubrics and resolve scoring inconsistencies across design studio submissions</li>
+                    <li>Hold office hours to support students on application and interaction design concepts, including structured decision-making frameworks (e.g., GACIOD matrices) and interactive system requirements</li>
                   </ul>
                 </div>
-                <img src="assets/DASH-Logo.jpg" alt="DASH Logo" class="image image--circle">
+                <img src="assets/ICS logo.jpg" alt="" class="image image--circle">
               </div>
             </details>
           </div>
@@ -157,7 +177,7 @@
                 INsite Lab
               </summary>
               <div class="experience-open">
-                <p class="experience-position">UX Research and Design Intern | Aug 2025 - Present</p>
+                <p class="experience-position">UX Research and Design Intern | Interdisciplinary Research Fellow | Aug 2025 - Present</p>
                 <div class="experience-description">
                   <ul>
                     <li>Design an interactive dashboard to reduce inaccessible language in lectures for blind and remote learners</li>
@@ -165,7 +185,7 @@
                     <li>Lead user research with professors to identify accessibility needs and create Figma wireframes and mockups</li>
                   </ul>
                 </div>
-                <img src="assets/insite_logo.png" alt="INsite Lab Logo" class="image image--circle">
+                <img src="assets/insite_logo.png" alt="" class="image image--circle">
               </div>
             </details>
           </div>
@@ -174,18 +194,18 @@
           <div class="experience-row">
             <details class="details experience-text">
               <summary class="summary">
-                FUSION ICS Project
+                Digital Accessibility Support and Help (DASH)
               </summary>
-                <div class="experience-open">
-                <p class="experience-position">Designer | Jan 2026 - May 2026</p>
+              <div class="experience-open">
+                <p class="experience-position">Digital Accessibility Supervisor | Sept 2025 - Sept 2026</p>
                 <div class="experience-description">
                   <ul>
-                    <li>Conceptualizing and pitching a website concept to a cross-functional team</li>
-                    <li>Collaborating with 4 designers on user research and UI design to connect Filipino Americans to their heritage</li>
-                    <li>Conduct user interviews to inform the design of a culturally focused cooking platform centered on family recipes</li>
+                    <li>Consult with faculty to review course materials and recommend accessibility improvements per WCAG standards</li>
+                    <li>Remediate instructional content to improve usability and ensure compliance with accessibility requirements</li>
+                    <li>Develop resources and actionable feedback to build long-term capacity for creating accessible course materials</li>
                   </ul>
                 </div>
-                <img src="assets/fusionicsproject_logo.jpg" alt="FUSION ICS Logo" class="image image--circle experience-image">
+                <img src="assets/DASH-Logo.jpg" alt="" class="image image--circle">
               </div>
             </details>
           </div>
@@ -194,55 +214,47 @@
           <div class="experience-row">
             <details class="details experience-text">
               <summary class="summary">
-                CCC Security Center
+                FUSION ICS Project
               </summary>
               <div class="experience-open">
-                <p class="experience-position">SOC Analyst Intern | July 2025 - Sept 2025</p>
+                <p class="experience-position">UX Designer | Jan 2026 - May 2026</p>
                 <div class="experience-description">
                   <ul>
-                    <li>Lead team in conceptualizing a Python script with Bitsight APIs to automate cybersecurity threat detection and analysis</li>
-                    <li>Apply open-source intelligence tools to investigate and analyze cybersecurity incidents across 116 schools</li>
+                    <li>Conceptualized and pitched a website concept to a cross-functional team</li>
+                    <li>Collaborated with 4 designers on user research and UI design to connect Filipino Americans to their heritage</li>
+                    <li>Conducted user interviews to inform the design of a culturally focused cooking platform centered on family recipes</li>
                   </ul>
                 </div>
-                <img src="assets/ccc_seal.png" alt="California Community Colleges Logo" class="image image--circle">
+                <img src="assets/fusionicsproject_logo.jpg" alt="" class="image image--circle">
               </div>
             </details>
           </div>
 
-          <!-- Experience 5 -->
+          <!-- Experience 5: Hack at UCI + VenusHacks combined -->
           <div class="experience-row">
             <details class="details experience-text">
               <summary class="summary">
-                Hack at UCI
+                Hack at UCI &amp; VenusHacks
               </summary>
               <div class="experience-open">
-                <p class="experience-position">(Intern → Organizer → Co-Director) | Nov 2023 - Mar 2026</p>
+                <p class="experience-position"><strong>Hack@UCI</strong> Corporate Co-Director | Nov 2023 - Present</p>
                 <div class="experience-description">
                   <ul>
                     <li>Manage relations and communication with 80+ sponsors to fundraise $12,000+ for events with 400+ participants</li>
-                    <li>Mentor new 8+ organizers and standardize sponsorship processes through documentation and outreach pipelines</li>
+                    <li>Mentor 8+ new organizers and standardize sponsorship processes through documentation and outreach pipelines</li>
                   </ul>
                 </div>
-                <img src="assets/hack-at-uci-logo_black.png" alt="Hack at UCI Logo" class="image image--circle">
-              </div>
-            </details>
-          </div>
-
-          <!-- Experience 6 -->
-          <div class="experience-row">
-            <details class="details experience-text">
-              <summary class="summary">
-                VenusHacks
-              </summary>
-              <div class="experience-open">
-                <p class="experience-position">Co-President | July 2024 - July 2025</p>
+                <p class="experience-position"><strong>VenusHacks</strong> Co-President | July 2024 - July 2025</p>
                 <div class="experience-description">
                   <ul>
-                    <li>Directed organizing team of 40+ students UCI’s only women-centric hackathon with 200+ participants annually.</li>
+                    <li>Directed an organizing team of 40+ students for UCI&rsquo;s only women-centric hackathon with 200+ participants annually</li>
                     <li>Oversaw a budget of $10,000+, including corporate fundraising, university allocations, and grant management</li>
                   </ul>
                 </div>
-                <img src="assets/logo_with_background.png" alt="VenusHacks 2025 Logo" class="image image--circle">
+                <div class="experience-logos">
+                  <img src="assets/hack-at-uci-logo_black.png" alt="" class="image image--circle">
+                  <img src="assets/logo_with_background.png" alt="" class="image image--circle">
+                </div>
               </div>
             </details>
           </div>
@@ -250,6 +262,8 @@
         </div>
       </div>
     </div>
+
+    </main>
 
     <!-- FOOTER: Contact information and social media links -->
     <footer class="content background" id="connect">
@@ -260,7 +274,7 @@
           <div class="card-socials">
             <div class="container-socials">
               <a href="mailto:paigetownsend05@gmail.com" aria-label="Email Paige Townsend">
-                <span class="fa-solid fa-envelope fa-4x" style="color: #1f1617;" aria-hidden="true"></span>
+                <span class="fa-solid fa-envelope fa-2x social-icon" aria-hidden="true"></span>
               </a>
             </div>
           </div>
@@ -268,21 +282,22 @@
           <div class="card-socials">
             <div class="container-socials">
               <a href="https://www.linkedin.com/in/ptownse/" aria-label="Paige Townsend LinkedIn profile">
-                <span class="fa-brands fa-square-linkedin fa-4x" style="color: #1f1617;" aria-hidden="true"></span>
+                <span class="fa-brands fa-square-linkedin fa-2x social-icon" aria-hidden="true"></span>
               </a>
-          </div>  
-        </div>
-        <!-- SPOTIFY PLAYLIST CARD -->
-        <div class="card-socials">
-          <div class="container-socials">
-          <iframe
-            src="https://open.spotify.com/embed/playlist/17zr4IfxJlPg3DfzjhmuWJ?utm_source=generator&theme=0"
-            style="width:100%; height:100%; border-radius:25px; border:0;"
-            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-            loading="lazy">
-          </iframe>
+            </div>
           </div>
-        </div>
+          <!-- SPOTIFY PLAYLIST CARD -->
+          <div class="card-socials">
+            <div class="container-socials">
+              <iframe
+                src="https://open.spotify.com/embed/playlist/17zr4IfxJlPg3DfzjhmuWJ?utm_source=generator&amp;theme=0"
+                title="Paige's Spotify playlist"
+                class="spotify-embed"
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                loading="lazy">
+              </iframe>
+            </div>
+          </div>
         </div>
       </div>
     </footer>

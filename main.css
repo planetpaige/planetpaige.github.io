@@ -209,7 +209,6 @@ ul.navbar li a:focus-visible {
   box-shadow : 0 8px 16px 0 rgba(0, 0, 0, 0.2);
   transition : 0.3s;
   border-radius: 25px;
-  max-height: 695px;
 }
 
 .card-socials {
@@ -299,7 +298,8 @@ details[open] .experience-open > img {
 /* Two logos (combined Hack at UCI and VenusHacks entry), stacked beside the text */
 .experience-logos {
   grid-column: 2;
-  grid-row: 2 / span 2;
+  grid-row: 1 / span 4;
+  align-self: center;
   display: flex;
   flex-direction: column;
   align-items: center;

@@ -52,37 +52,6 @@ p {
   font-style: italic;
 }
 
-/* ===== Accessibility helpers ===== */
-/* Skip link: hidden until it receives keyboard focus */
-.skip-link {
-  position: absolute;
-  left: 0.5rem;
-  top: -4rem;
-  padding: 0.75rem 1rem;
-  background: #1f1617;
-  color: #ffffff;
-  border-radius: 8px;
-  z-index: 1000;
-}
-
-.skip-link:focus {
-  top: 0.5rem;
-}
-
-/* Clear keyboard focus indicator */
-a:focus-visible,
-summary:focus-visible {
-  outline: 3px solid rgb(112, 18, 199);
-  outline-offset: 3px;
-}
-
-/* Smooth scrolling, off for users who prefer reduced motion */
-@media (prefers-reduced-motion: no-preference) {
-  html {
-    scroll-behavior: smooth;
-  }
-}
-
 /* ===== Image Styles ===== */
 .image {
   width: 250px;
@@ -105,12 +74,6 @@ summary:focus-visible {
   box-shadow : 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
-/* Project card screenshot (replaces inline style) */
-.card-image {
-  width: 100%;
-  border-radius: 25px 25px 0 0;
-}
-
 /* Set up for the basic layout with margins and padding for throughout the page */
 .content {
     display: grid;
@@ -122,19 +85,12 @@ summary:focus-visible {
 
 /* Same layout for the page with the gradient background to differentiate the sections */
 .background{
-  background-image: linear-gradient(120deg, #eccaff 14%, #c7bbff 56%, #afb1ff 89%);
+  background-image: linear-gradient(to right, #eccaff, #afb1ff);
 }
-
 /* ===== Navigation Bar ===== */
-/* The sticky behavior lives on the <nav> wrapper, because a sticky element
-   only stays stuck while inside its parent */
-nav[aria-label="Main"] {
-  position: sticky; /* Sticks to top on scroll */
-  top: 0;
-  z-index: 100;
-}
-
 ul.navbar {
+    position: sticky; /* Sticks to top on scroll */
+    top: 0;
     justify-content: center;
     display: flex;
     list-style-type: none;
@@ -163,14 +119,7 @@ ul.navbar li a:hover {
     box-shadow : 0 16px 20px 0 rgba(0, 0, 0, 0.5);
 }
 
-/* White focus ring so it shows up on the dark nav bar */
-ul.navbar li a:focus-visible {
-    outline: 3px solid #ffffff;
-    outline-offset: -6px;
-}
-
-/* Single-column sections */
-#connect, #projects, #experience {
+#connect, #projects {
   grid-template-columns: 1fr;
 }
 
@@ -189,17 +138,11 @@ ul.navbar li a:focus-visible {
   gap: 80px;
 }
 
-/* Project cards are wrapped in links (replaces inline style) */
-.card-link {
-  text-decoration: none;
-  color: inherit;
-}
-
 /* Contact Card List*/
 .card-list-contact {
   display: grid;
   grid-template-columns: 1fr 1fr 3fr; /* Longer 3rd column for spotify embed widget */
-  gap: 40px;
+  gap: 80px;
   margin-top: 8px;
 }
 
@@ -216,7 +159,7 @@ ul.navbar li a:focus-visible {
   align-items: center;
   justify-content: center;
   width: 100%;
-  height: 60px;
+  height: 100px;
   border-radius: 25px;
 }
 
@@ -233,30 +176,11 @@ ul.navbar li a:focus-visible {
   align-items: center;
   justify-content: center;
   width: 80%;
-  height: 60px;
+  height: 100px;
   margin-top: 12px;
 }
-
-.social-icon {
-  color: #1f1617;
-}
-
-.spotify-embed {
-  width: 100%;
-  height: 100%;
-  border: 0;
-  border-radius: 25px;
-}
-
-/* Resume link (replaces inline style) */
-.resume-link {
-  color: rgb(112, 18, 199);
-  font-size: 25px;
-}
-
 /* ===== Collapsible Sections (adapted from Jordan Finners) ===== */
-/* Only the summary bar is unselectable, so opened text can still be copied */
-summary {
+details {
   user-select: none;
 }
 
@@ -264,8 +188,7 @@ summary {
   gap: 8px;
   background-color: #cabbfa;
   font-size: 25px;
-  width: 100%;
-  box-sizing: border-box;
+  width: 350%;
   padding: 28px;
   margin-bottom: 0;
   margin-top: 16px;
@@ -289,30 +212,13 @@ details[open] .experience-open {
   column-gap: 60px;
 }
 
-/* Centers a single logo vertically and horizontally */
-details[open] .experience-open > img {
+/* Centers the logo vertically and hortizonally */
+details[open] .experience-open > :nth-child(3) {
   justify-self: center;
   text-align: center;
 }
 
-/* Two logos (combined Hack at UCI and VenusHacks entry), stacked beside the text */
-.experience-logos {
-  grid-column: 2;
-  grid-row: 1 / span 4;
-  align-self: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 24px;
-}
-
-.experience-logos .image {
-  width: 160px;
-  height: 160px;
-}
-
 .experience-position {
-  grid-column: 1;
   margin-bottom: 8px;
   margin-left: 10px;
   font-size: 32px;
@@ -333,104 +239,8 @@ details[open] .experience-open > img {
   display: none; /* Hidden until <details> is opened */
 }
 
-/* ===== Tablet ===== */
-@media (max-width: 1100px) {
-  .card-list {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 40px;
-  }
-}
-
-/* ===== Mobile ===== */
-@media (max-width: 800px) {
-  .content {
-    grid-template-columns: 1fr;
-    padding: 20px;
-  }
-
-  /* Center the headshot and About photo when stacked */
-  .content > .image {
-    justify-self: center;
-  }
-
-  .image--rounded {
-    max-width: 100%;
-    height: auto;
-  }
-
-  .intro, h1 {
-    font-size: 34px;
-    margin-top: 24px;
-    margin-bottom: 24px;
-  }
-
-  .sub-intro, h2 {
-    font-size: 24px;
-  }
-
-  p {
-    font-size: 18px;
-  }
-
-  ul.navbar {
-    flex-wrap: wrap;
-    font-size: 18px;
-  }
-
-  ul.navbar li a {
-    padding: 12px 14px;
-  }
-
-  .card-list {
-    grid-template-columns: 1fr;
-    width: 100%;
-    gap: 32px;
-  }
-
-  .card {
-    max-height: none;
-  }
-
-  .card-list-contact {
-    grid-template-columns: 1fr 1fr;
-    gap: 24px;
-  }
-
-  /* Spotify embed gets its own full-width row */
-  .card-list-contact .card-socials:last-child {
-    grid-column: 1 / -1;
-  }
-
-  summary {
-    font-size: 20px;
-    padding: 18px;
-  }
-
-  details[open] .experience-open {
-    grid-template-columns: 1fr;
-  }
-
-  .experience-position {
-    font-size: 22px;
-  }
-
-  .experience-description {
-    font-size: 18px;
-  }
-
-  /* Logos drop below the text on small screens */
-  details[open] .experience-open > img {
-    grid-column: 1;
-    width: 160px;
-    height: 160px;
-    margin-top: 16px;
-  }
-
-  .experience-logos {
-    grid-column: 1;
-    grid-row: auto;
-    flex-direction: row;
-    justify-content: center;
-    margin-top: 16px;
-  }
+.site-footer iframe {
+  width: 100%;
+  height: 100%;
+  border-radius: 25px;
 }

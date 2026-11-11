@@ -1,25 +1,70 @@
-/* ===== Primary Styles ===== */
-.montserrat {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 600;
+/* ==========================================================================
+   Paige Townsend, Portfolio Stylesheet
+
+   Contents
+   1. Design tokens (CSS variables)
+   2. Base and typography
+   3. Accessibility helpers
+   4. Layout
+   5. Images
+   6. Navigation bar
+   7. Project cards
+   8. Experience (collapsible sections)
+   9. Footer
+   10. Responsive: tablet
+   11. Responsive: mobile
+   ========================================================================== */
+
+
+/* ==========================================================================
+   1. Design tokens
+   ========================================================================== */
+:root {
+  /* Colors */
+  --color-dark: #1f1617;
+  --color-light: #f5f4f6;
+  --color-white: #ffffff;
+  --color-accent: rgb(112, 18, 199);
+  --color-summary: #cabbfa;
+  --color-summary-hover: #bfacfb;
+  --gradient-brand: linear-gradient(120deg, #eccaff 14%, #c7bbff 56%, #afb1ff 89%);
+                        
+  /* Typography */
+  --font-main: "Montserrat", sans-serif;
+
+  /* Shadows */
+  --shadow-sm: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  --shadow-md: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  --shadow-lg: 0 16px 20px 0 rgba(0, 0, 0, 0.5);
 }
 
+
+/* ==========================================================================
+   2. Base and typography
+   ========================================================================== */
 body {
   margin: 0;
   padding: 0;
-  background-color: #f5f4f6;
-  color: #1f1617;
+  font-family: var(--font-main);
+  background-color: var(--color-light);
+  color: var(--color-dark);
+}
+
+/* Match the case study pages' padding; the header sits outside <main>, so it keeps .content's padding */
+main .content {
+  padding: 50px;
 }
 
 p {
-  font-family: "Montserrat", sans-serif;
+  font-family: var(--font-main);
   font-weight: 500;
   font-size: 20px;
 }
 
-/* Shared style for intro text and h1 */
-.intro, h1 {
-  font-family: "Montserrat", sans-serif;
+/* Page title (h1) and intro text */
+.intro,
+h1 {
+  font-family: var(--font-main);
   font-weight: 800;
   font-size: 50px;
   font-style: italic;
@@ -27,40 +72,35 @@ p {
   margin-bottom: 50px;
 }
 
-/* Shared style for sub intro text and h2 */
-.sub-intro, h2 {
-  font-family: "Montserrat", sans-serif;
+/* Section headings (h2) and sub-intro text */
+.sub-intro,
+h2 {
+  font-family: var(--font-main);
   font-weight: 700;
   font-size: 30px;
   margin-top: 30px;
   margin-bottom: 30px;
 }
 
-/* Project section subtitle */
-.projects-title {
-  font-family: "Montserrat", sans-serif;
+/* Link to the full resume */
+.resume-link {
+  color: var(--color-accent);
   font-size: 25px;
-  font-weight: 700;
 }
 
-/* Project position paragraph style */
-.projects-position {
-  font-family: "Montserrat", sans-serif;
-  font-size: 16px;
-  margin-top: 30px;
-  margin-bottom: 30px;
-  font-style: italic;
-}
 
-/* ===== Accessibility helpers ===== */
+/* ==========================================================================
+   3. Accessibility helpers
+   ========================================================================== */
+
 /* Skip link: hidden until it receives keyboard focus */
 .skip-link {
   position: absolute;
   left: 0.5rem;
   top: -4rem;
   padding: 0.75rem 1rem;
-  background: #1f1617;
-  color: #ffffff;
+  background: var(--color-dark);
+  color: var(--color-white);
   border-radius: 8px;
   z-index: 1000;
 }
@@ -69,10 +109,10 @@ p {
   top: 0.5rem;
 }
 
-/* Clear keyboard focus indicator */
+/* Clear keyboard focus indicator (dark sections override this with white) */
 a:focus-visible,
 summary:focus-visible {
-  outline: 3px solid rgb(112, 18, 199);
+  outline: 3px solid var(--color-accent);
   outline-offset: 3px;
 }
 
@@ -83,94 +123,27 @@ summary:focus-visible {
   }
 }
 
-/* ===== Image Styles ===== */
-.image {
-  width: 250px;
-  height: 250px;
-  object-fit: cover; /* Fill container */
-  object-position: center;
-  box-shadow : 0 8px 16px 0 rgba(0, 0, 0, 0.2);
-}
+/* ==========================================================================
+   4. Layout
+   ========================================================================== */
 
-/* Fully circular image for headshot and logos */
-.image--circle {
-  border-radius: 70%;
-}
-
-/* Rounded rectangle image for project screenshots */
-.image--rounded {
-  max-width: 350px;
-  height: 400px;
-  border-radius: 25px;
-  box-shadow : 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-}
-
-/* Project card screenshot (replaces inline style) */
-.card-image {
-  width: 100%;
-  border-radius: 25px 25px 0 0;
-}
-
-/* Set up for the basic layout with margins and padding for throughout the page */
+/* Basic section layout: two columns (image | text) with shared spacing */
 .content {
-    display: grid;
-    grid-template-columns: auto 1fr;
-    align-items: start;
-    gap: 32px;
-    padding: 30px;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: start;
+  gap: 32px;
+  padding: 30px;
 }
 
-/* Same layout for the page with the gradient background to differentiate the sections */
-.background{
-  background-image: linear-gradient(120deg, #eccaff 14%, #c7bbff 56%, #afb1ff 89%);
+/* Gradient background used to alternate sections */
+.background {
+  background-image: var(--gradient-brand);
 }
 
-/* ===== Navigation Bar ===== */
-/* The sticky behavior lives on the <nav> wrapper, because a sticky element
-   only stays stuck while inside its parent */
-nav[aria-label="Main"] {
-  position: sticky; /* Sticks to top on scroll */
-  top: 0;
-  z-index: 100;
-}
-
-ul.navbar {
-    justify-content: center;
-    display: flex;
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    background-color: #1f1617;
-    font-family: "Montserrat", sans-serif;
-    font-weight: 400;
-    font-size: 25px;
-    box-shadow : 0 8px 16px 0 rgba(0, 0, 0, 0.2);
-    max-width: 100%;
-}
-
-ul.navbar li a {
-    display: block;
-    color: white;
-    gap: 40px;
-    padding: 20px;
-    text-decoration: none;
-}
-
-ul.navbar li a:hover {
-    background-color: #f5f4f6;
-    color: black;
-    font-style: italic;
-    box-shadow : 0 16px 20px 0 rgba(0, 0, 0, 0.5);
-}
-
-/* White focus ring so it shows up on the dark nav bar */
-ul.navbar li a:focus-visible {
-    outline: 3px solid #ffffff;
-    outline-offset: -6px;
-}
-
-/* Single-column sections */
-#connect, #projects, #experience {
+/* Sections that are a single column */
+#projects,
+#experience {
   grid-template-columns: 1fr;
 }
 
@@ -179,120 +152,216 @@ ul.navbar li a:focus-visible {
   overflow-x: hidden;
 }
 
-/* ===== Card Layouts ===== */
+
+/* ==========================================================================
+   5. Images
+   ========================================================================== */
+.image {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  object-position: center;
+  box-shadow: var(--shadow-md);
+}
+
+/* Circular headshot and logos */
+.image--circle {
+  border-radius: 70%;
+}
+
+/* Rounded rectangle for the About photo */
+.image--rounded {
+  max-width: 350px;
+  height: 400px;
+  border-radius: 25px;
+  box-shadow: var(--shadow-sm);
+}
+
+
+/* ==========================================================================
+   6. Navigation bar
+   ========================================================================== */
+
+/* Sticky behavior lives on the <nav> wrapper, because a sticky element
+   only stays stuck while inside its parent */
+nav[aria-label="Main"] {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+ul.navbar {
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  background-color: var(--color-dark);
+  font-family: var(--font-main);
+  font-weight: 400;
+  font-size: 25px;
+  box-shadow: var(--shadow-md);
+}
+
+ul.navbar li a {
+  display: block;
+  padding: 20px;
+  color: var(--color-white);
+  text-decoration: none;
+}
+
+ul.navbar li a:hover {
+  background-color: var(--color-light);
+  color: black;
+  font-style: italic;
+  box-shadow: var(--shadow-lg);
+}
+
+/* White focus ring so it shows up on the dark nav bar */
+ul.navbar li a:focus-visible {
+  outline: 3px solid var(--color-white);
+  outline-offset: -6px;
+}
+
+
+/* ==========================================================================
+   7. Project cards
+   Card pattern adapted from W3Schools:
+   https://www.w3schools.com/howto/howto_css_cards.asp
+   ========================================================================== */
 .card-list {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3-column card grid */
-  justify-content: center;
-  margin: 0 auto;
-  width: fit-content;
-  gap: 80px;
-}
-
-/* Project cards are wrapped in links (replaces inline style) */
-.card-link {
-  text-decoration: none;
-  color: inherit;
-}
-
-/* Contact Card List*/
-.card-list-contact {
-  display: grid;
-  grid-template-columns: 1fr 1fr 3fr; /* Longer 3rd column for spotify embed widget */
-  gap: 40px;
-  margin-top: 8px;
-}
-
-/* Card styling (adapted from W3Schools) */
-.card {
-  background-color: white;
-  box-shadow : 0 8px 16px 0 rgba(0, 0, 0, 0.2);
-  transition : 0.3s;
-  border-radius: 25px;
-}
-
-.card-socials {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 48px;
   width: 100%;
-  height: 60px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.card {
+  background-color: var(--color-white);
+  box-shadow: var(--shadow-md);
   border-radius: 25px;
+  transition: 0.3s;
+}
+
+.card-badge {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  padding: 6px 14px;
+  border-radius: 999px;
+  background-color: #FFC663;
+  color: var(--color-dark);
+  font-family: var(--font-main);
+  font-size: 14px;
+  font-weight: 700;
+  box-shadow: var(--shadow-sm);
+}
+
+.card-in-progress {
+  position: relative;
 }
 
 .card:hover {
-  box-shadow: 0 16px 20px 0 rgba(0, 0, 0, 0.5);
+  box-shadow: var(--shadow-lg);
+}
+
+.card-in-progress:hover {
+  box-shadow: var(--shadow-md);
+}
+
+.card-image {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: 25px 25px 0 0;
+}
+
+.card-link {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
+
+.card-link:hover .projects-title {
+  text-decoration: underline;
 }
 
 .container {
-  padding : 16px;
+  padding: 16px;
 }
 
-.container-socials {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 80%;
-  height: 60px;
-  margin-top: 12px;
-}
-
-.social-icon {
-  color: #1f1617;
-}
-
-.spotify-embed {
-  width: 100%;
-  height: 100%;
-  border: 0;
-  border-radius: 25px;
-}
-
-/* Resume link (replaces inline style) */
-.resume-link {
-  color: rgb(112, 18, 199);
+.projects-title {
+  font-family: var(--font-main);
   font-size: 25px;
+  font-weight: 700;
 }
 
-/* ===== Collapsible Sections (adapted from Jordan Finners) ===== */
-/* Only the summary bar is unselectable, so opened text can still be copied */
-summary {
-  user-select: none;
-}
-
-summary {
-  gap: 8px;
-  background-color: #cabbfa;
-  font-size: 25px;
-  width: 100%;
-  box-sizing: border-box;
-  padding: 28px;
-  margin-bottom: 0;
-  margin-top: 16px;
-}
-
-.summary p {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 400;
-  font-size: 25px;
+.projects-position {
+  font-family: var(--font-main);
+  font-size: 16px;
   font-style: italic;
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
 
-.summary:hover{
-  background-color: #bfacfb;
+
+/* ==========================================================================
+   8. Experience (collapsible sections)
+   Collapsible pattern adapted from Jordan Finners
+   ========================================================================== */
+.experience-text {
+  font-family: var(--font-main);
+  font-weight: 500;
+  font-size: 18px;
+}
+
+summary {
+  box-sizing: border-box;
+  width: 100%;
+  gap: 8px;
+  margin-top: 16px;
+  margin-bottom: 0;
+  padding: 28px;
+  background-color: var(--color-summary);
+  font-size: 25px;
+  user-select: none; /* Only the summary bar, so opened text can still be copied */
+}
+
+.summary:hover {
+  background-color: var(--color-summary-hover);
   cursor: pointer;
+}
+
+/* Hidden until the <details> is opened */
+.experience-open {
+  display: none;
 }
 
 details[open] .experience-open {
   display: grid;
-  grid-template-columns: 3fr 1fr; /* Text | Image */
+  grid-template-columns: 3fr 1fr; /* Text | Logo */
   column-gap: 60px;
 }
 
-/* Centers a single logo vertically and horizontally */
+/* Centers a single logo */
 details[open] .experience-open > img {
   justify-self: center;
   text-align: center;
+}
+
+.experience-position {
+  grid-column: 1;
+  margin-bottom: 8px;
+  margin-left: 10px;
+  font-size: 32px;
+}
+
+.experience-description {
+  grid-column: 1;
+  font-size: 25px;
 }
 
 /* Two logos (combined Hack at UCI and VenusHacks entry), stacked beside the text */
@@ -310,29 +379,65 @@ details[open] .experience-open > img {
   height: 160px;
 }
 
-.experience-position {
-  grid-column: 1;
-  margin-bottom: 8px;
-  margin-left: 10px;
-  font-size: 32px;
+
+/* ==========================================================================
+   9. Footer
+   ========================================================================== */
+footer#connect {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 30px;
+  background-color: var(--color-dark);
+  color: var(--color-white);
+  text-align: center;
 }
 
-.experience-description {
-  grid-column: 1;
-  font-size: 25px;
+footer#connect h2 {
+  margin: 0 0 12px;
+  color: var(--color-white);
 }
 
-.experience-text {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 500;
-  font-size: 18px;
+footer#connect a,
+footer#connect .social-icon {
+  color: var(--color-white);
 }
 
-.experience-open {
-  display: none; /* Hidden until <details> is opened */
+/* White focus ring so it shows up on the dark footer */
+footer#connect a:focus-visible {
+  outline: 3px solid var(--color-white);
+  outline-offset: 3px;
 }
 
-/* ===== Tablet ===== */
+/* Row of social icons */
+.card-list-contact {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 8px;
+}
+
+.card-socials {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  height: 60px;
+  border-radius: 4px;
+}
+
+.container-socials {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 60px;
+}
+
+
+/* ==========================================================================
+   10. Responsive: tablet
+   ========================================================================== */
 @media (max-width: 1100px) {
   .card-list {
     grid-template-columns: repeat(2, 1fr);
@@ -340,8 +445,30 @@ details[open] .experience-open > img {
   }
 }
 
-/* ===== Mobile ===== */
+
+/* ==========================================================================
+   11. Responsive: mobile
+   ========================================================================== */
 @media (max-width: 800px) {
+
+  /* Typography */
+  .intro,
+  h1 {
+    font-size: 34px;
+    margin-top: 24px;
+    margin-bottom: 24px;
+  }
+
+  .sub-intro,
+  h2 {
+    font-size: 24px;
+  }
+
+  p {
+    font-size: 18px;
+  }
+
+  /* Layout */
   .content {
     grid-template-columns: 1fr;
     padding: 20px;
@@ -357,20 +484,7 @@ details[open] .experience-open > img {
     height: auto;
   }
 
-  .intro, h1 {
-    font-size: 34px;
-    margin-top: 24px;
-    margin-bottom: 24px;
-  }
-
-  .sub-intro, h2 {
-    font-size: 24px;
-  }
-
-  p {
-    font-size: 18px;
-  }
-
+  /* Navigation */
   ul.navbar {
     flex-wrap: wrap;
     font-size: 18px;
@@ -380,26 +494,14 @@ details[open] .experience-open > img {
     padding: 12px 14px;
   }
 
+  /* Project cards */
   .card-list {
     grid-template-columns: 1fr;
     width: 100%;
     gap: 32px;
   }
 
-  .card {
-    max-height: none;
-  }
-
-  .card-list-contact {
-    grid-template-columns: 1fr 1fr;
-    gap: 24px;
-  }
-
-  /* Spotify embed gets its own full-width row */
-  .card-list-contact .card-socials:last-child {
-    grid-column: 1 / -1;
-  }
-
+  /* Experience */
   summary {
     font-size: 20px;
     padding: 18px;
@@ -417,7 +519,7 @@ details[open] .experience-open > img {
     font-size: 18px;
   }
 
-  /* Logos drop below the text on small screens */
+  /* Logos drop below the text */
   details[open] .experience-open > img {
     grid-column: 1;
     width: 160px;
@@ -432,5 +534,4 @@ details[open] .experience-open > img {
     justify-content: center;
     margin-top: 16px;
   }
-  
 }

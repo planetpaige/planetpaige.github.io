@@ -44,7 +44,7 @@
                 <div class="case-hero-text">
                     <!-- Introductory text content -->
                     <h1 id="project-title">Quizlet Redesign</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur adipiscing elit occaecat sunt. Blanditiis nostrud incididunt possimus quis nulla minus libero laboris et deserunt nam in. Eos enim rerum quibusdam qui iusto commodo. Esse fugiat dolore nihil occaecat in. Omnis et dolor imperdiet animi nam sint dolore dolore in id.</p>
+                    <p>A UX research and design project for IN4MATX 131 exploring how UCI STEM students study with Quizlet. Through interviews, personas, and wireframes, our team designed a student verification layer that helps learners find accurate study sets faster and with more confidence.</p>
                 </div>
 
                 <dl class="case-meta project-info">
@@ -66,7 +66,7 @@
                 </dl>
 
                 <div class="prototype-buttons-container">
-                    <a href="https://www.figma.com/proto/F1HiDMlABXjYkNx8UR2jrg/Clarity-Coach?page-id=629%3A953&amp;node-id=669-2296&amp;viewport=55%2C402%2C0.33&amp;t=U3np640oD6qfCajJ-1&amp;scaling=min-zoom&amp;content-scaling=fixed" target="_blank" rel="noopener noreferrer" aria-label="View Interactive Prototype (opens in new tab)" class="btn">View Interactive Prototype</a>
+                    <a href="https://www.figma.com/proto/7g7rc0kI0gEINCjQ0iuztb/Quizlet-Interface-Design?node-id=46-266&viewport=75%2C304%2C0.1&t=pzsYaBE8PDwkkIH5-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=46%3A266&page-id=1%3A3" target="_blank" rel="noopener noreferrer" aria-label="View Interactive Prototype (opens in new tab)" class="btn">View Interactive Prototype</a>
                 </div>
             </section>
 
@@ -79,8 +79,28 @@
                         </div>
                         <div class="phase-card">
                             <div class="phase-content">
-                                <h2>Phase Title</h2>
-                                <p>Lorem ipsum dolor sit amet consectetur adipiscing elit occaecat sunt. Blanditiis nostrud incididunt possimus quis nulla minus libero laboris et deserunt nam in. Eos enim rerum quibusdam qui iusto commodo. Esse fugiat dolore nihil occaecat in. Omnis et dolor imperdiet animi nam sint dolore dolore in id.</p>
+                            <h2>Understanding Users</h2>
+                            <p><strong>Goal:</strong> Learn how UCI STEM undergraduate students use Quizlet and other study tools before introducing changes.</p>
+                            <p><strong>What I did:</strong> As a team, we discussed and developed our interview protocol to focus on current use cases of the software. I functioned as one of the primary UX researchers and helped run semi-structured interviews. After all the interviews were conducted, we came back together as a team to analyze the data through affinity mapping and AI-assisted analysis, then built a proto-persona, Sophia.</p>
+
+                            <p><strong>What we found:</strong></p>
+                            <ul class="phase-findings">
+                                <li>Students use Quizlet primarily as a pre-exam cram session.</li>
+                                <li>They rely on publicly accessible sets, rather than creating their own.</li>
+                                <li>The interface is well liked, but the recent incorporation of a paywall on advanced features is a common frustration.</li>
+                                <li>Some participants feel less efficient studying without it.</li>
+                            </ul>
+
+                            <p>We used these observations to come up with a solution focused on improving time efficiency.</p>
+                            </div>
+
+                            <div class="phase-images">
+                                <figure class="phase-figure">
+                                    <img src="assets/quizlet persona.png" alt="Proto-persona named Sophia with goals to make learning more fun and easier to memorize class concepts." class="phase-image">
+                                </figure>
+                                <figure class="phase-figure">
+                                    <img src="assets/quizlet affinity diagram.png" alt="FigJam affinity diagram with 5 common themes and 3 potential user stories." class="phase-image">
+                                </figure>
                             </div>
                         </div>
                     </li>
@@ -92,10 +112,21 @@
                         </div>
                         <div class="phase-card">
                             <div class="phase-content">
-                                <h2>Phase Title</h2>
-                                <p>Lorem ipsum dolor sit amet consectetur adipiscing elit occaecat sunt. Blanditiis nostrud incididunt possimus quis nulla minus libero laboris et deserunt nam in. Eos enim rerum quibusdam qui iusto commodo. Esse fugiat dolore nihil occaecat in. Omnis et dolor imperdiet animi nam sint dolore dolore in id.</p>
+                                <h2>Problem Statement</h2>
+                                <p><strong>Goal:</strong> Turn our research into a single focused problem worth redesigning.
+                                <br><strong>What I did:</strong> I led the user story and task flows. Interviews showed student rarely make their own sets and often get frustrated by inaccurate information on public ones, so I framed the story around a study looking for trustworthy material. I mapped the current flow (search, then manually checking each set) against our redesigned flow centered around a "Student Verified" filter.
+                                <br><strong>Key Decisions:</strong></p>
+                                <ul class="phase-findings">
+                                    <li>Choose a small, achievable scope instead of a complete app overhaul</li>
+                                    <li>Simplified the task flow</li>
+                                    <li>Added an optional step where users can publically tag sets as "Student Verified."</li>
                             </div>
-                            <img src="placeholder.jpg" alt="Phase Image" class="phase-image">
+                            <figure class="user-story">
+                                <blockquote style="padding: 0;">
+                                    <p>As a student, I want to <mark class="highlight">search through public student verified flashcard sets</mark>, so that I can find the most accurate and beneficial information to study..</p>
+                                </blockquote>
+                            </figure>
+                            <img src="assets/quizlet task flow.png" alt="Comparison of the original and redesigned task flow" class="phase-image">
                         </div>
                     </li>
 
@@ -106,12 +137,34 @@
                         </div>
                         <div class="phase-card">
                             <div class="phase-content">
-                                <h2>Phase Title</h2>
-                                <p>Lorem ipsum dolor sit amet consectetur adipiscing elit occaecat sunt. Blanditiis nostrud incididunt possimus quis nulla minus libero laboris et deserunt nam in. Eos enim rerum quibusdam qui iusto commodo. Esse fugiat dolore nihil occaecat in. Omnis et dolor imperdiet animi nam sint dolore dolore in id.</p>
+                                <h2>Early Mockups</h2>
+                                <p><strong>Goal:</strong> Turn the redesigned flow into screen that fit naturally with Quizlet's existing interface.
+                                <br><strong>What I did:</strong> I led the wireframing with a teammate who focused on the Low-Fidelity sketch. After deciding what direction we were going in, I built up the mid-fidelity wireframes in Figma.
+                                <br><strong>The soultion:</strong></p>
+                                <ul class="phase-findings">
+                                    <li>A "Student Verified" filter to the search results page</li>
+                                    <li>Added a "Student Verified" badge next to each flashcard set to show how many times it's been verified</li>
+                                    <li>Kept the rest of the layout the same as the exisiting site to create a usable base for my teammates.</li>
+                                </ul>
+                                <p><strong>What I learned:</strong></p>
+                                <ul class="phase-findings">
+                                    <li>Inconsistent layer names slowed us down, so I would set naming conventions from the start.</li>
+                                    <li>We needed to be careful not to add too many new features or change the layout too much, as this could confuse users.</li>
+                                </ul>
                             </div>
-                            <img src="placeholder.jpg" alt="Phase Image" class="phase-image">
+                            <div class="phase-images">
+                                <figure class="phase-figure">
+                                    <img src="assets/quizlet lo fi.png" alt="Paper sketches of initial concept for redesign." class="phase-image">
+                                    <p style="font-size: 12px;"><strong>Credit:</strong> Venus Nguyen</p>
+                                </figure>
+                                <figure class="phase-figure">
+                                    <img src="assets/quizlet mid fi.png" alt="Mid fidelity mockup of the new design including a filter option for 'Student Verified' sets." class="phase-image">
+                                </figure>
+                                <div class="prototype-buttons-container">
+                                    <a href="https://www.figma.com/design/7g7rc0kI0gEINCjQ0iuztb/Quizlet-Interface-Design?node-id=0-1&t=t9lL21pTonXdyNoS-1" target="_blank" rel="noopener noreferrer" aria-label="View Mid-Fidelity Mockup (opens in new tab)" class="btn">View Mid-Fidelity Mockup</a>
+                                </div>
+                            </div>
                         </div>
-                    </li>
 
                     <li class="phase-item">
                         <div class="phase-marker" style="border-color: #FFC663;">
@@ -120,11 +173,22 @@
                         </div>
                         <div class="phase-card">
                             <div class="phase-content">
-                                <h2>Phase Title</h2>
-                                <h3>[Phase Status]</h3>
-                                <p>Lorem ipsum dolor sit amet consectetur adipiscing elit occaecat sunt. Blanditiis nostrud incididunt possimus quis nulla minus libero laboris et deserunt nam in. Eos enim rerum quibusdam qui iusto commodo. Esse fugiat dolore nihil occaecat in. Omnis et dolor imperdiet animi nam sint dolore dolore in id.</p>
+                                <h2>Bringing it all together</h2>
+                                <h3>COMPLETE</h3>
+                                <p>My teammates then built high-fidelity mockups and an interactive prototype to include hover behavior for the filter menu. This went on to be the version we presented to our classmates by the end of the quarter.
+                                <br><strong>What I learned:</strong> I learned how to work with a team of designers to create a cohesive design. I also learned how to use Figma to create high-fidelity mockups and an interactive prototype. Finally, I learned how to present our work to an audience and answer questions about our design decisions.
+                                </p>
                             </div>
-                            <img src="placeholder.jpg" alt="Phase Image" class="phase-image">
+                            <div class="phase-images">
+                                <figure class="phase-figure">
+                                    <img src="assets/quizlet hi fi.png" alt="Final high-fidelity mockups in Figma with the added filtering option." class="phase-image">
+                                    <p style="font-size: 12px;"><strong>Credit:</strong> Venus Nguyen</p>
+                                </figure>
+                                <figure class="phase-figure">
+                                    <img src="assets/student verified component.png" alt="Prototyped version of the hi-fi showcasing the added filter and badge features." class="phase-image">
+                                    <p style="font-size: 12px;"><strong>Credit:</strong> Shakeel Riyaj, Samuel Gines</p>
+                                </figure>
+                            </div>
                         </div>
                     </li>
                 </ol>
@@ -160,6 +224,7 @@
                         <div class="container-socials">
                         <a href="mailto:paigetownsend05@gmail.com" aria-label="Email Paige Townsend">
                             <span class="fa-solid fa-envelope fa-2x social-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Email Paige Townsend</span>
                         </a>
                         </div>
                     </div>
@@ -168,6 +233,7 @@
                         <div class="container-socials">
                         <a href="https://www.linkedin.com/in/ptownse/" aria-label="Paige Townsend LinkedIn profile">
                             <span class="fa-brands fa-square-linkedin fa-2x social-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Paige Townsend LinkedIn profile</span>
                         </a>
                         </div>
                     </div>

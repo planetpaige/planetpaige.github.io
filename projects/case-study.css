@@ -86,6 +86,7 @@
 .prototype-buttons-container {
   display: flex;
   justify-content: center;
+  gap: 20px;
 }
 
 
@@ -238,18 +239,29 @@
   margin-bottom: 0;
 }
 
+.phase-images {
+  display: grid;
+  gap: 12px;
+  align-items: center;
+  justify-items: center;
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.phase-content .phase-images {
+  margin-top: 24px;
+}
+
+.phase-figure {
+  margin: 0;
+}
+
 .phase-image {
   display: block;
   width: 100%;
-  max-width: 811px;
-  margin: 0 auto;
-  aspect-ratio: 16 / 9;
-  object-fit: contain;
+  height: auto; 
   border-radius: 10px;
-}
-
-.phase-content .phase-image {
-  margin-top: 24px;
 }
 
 .user-story {
@@ -263,23 +275,7 @@
 
 .user-story::before {
   content: "\201C";
-  content: "\201C" / ""; /* empty alt text keeps screen readers from announcing it, where supported */
-  position: absolute;
-  top: 8px;
-  left: 20px;
-  font-size: 80px;
-  font-weight: 800;
-  line-height: 1;
-  color: var(--color-accent);
-}
-
-.user-story blockquote {
-  margin: 0;
-}
-
-.user-story::before {
-  content: "\201C";
-  content: "\201C" / ""; /* empty alt text keeps screen readers from announcing it, where supported */
+  content: "\201C" / ""; 
   position: absolute;
   top: 8px;
   left: 20px;

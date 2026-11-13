@@ -41,7 +41,8 @@
             <div class="case-hero-text">
                 <!-- Introductory text content -->
                 <h1 id="project-title">Clarity Coach</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipiscing elit occaecat sunt. Blanditiis nostrud incididunt possimus quis nulla minus libero laboris et deserunt nam in. Eos enim rerum quibusdam qui iusto commodo. Esse fugiat dolore nihil occaecat in. Omnis et dolor imperdiet animi nam sint dolore dolore in id.</p>
+                <p>A professor facing dashboard powered by AI meant to help college lecturers find and fix instances of spatially ambiguous language, such as "over here" or "this one," 
+                    in their lectures so they are clearer for blind and low-vision students.</p>
             </div>
 
             <dl class="case-meta project-info">
@@ -76,8 +77,22 @@
                         </div>
                         <div class="phase-card">
                             <div class="phase-content">
-                                <h2>Phase Title</h2>
-                                <p>Lorem ipsum dolor sit amet consectetur adipiscing elit occaecat sunt. Blanditiis nostrud incididunt possimus quis nulla minus libero laboris et deserunt nam in. Eos enim rerum quibusdam qui iusto commodo. Esse fugiat dolore nihil occaecat in. Omnis et dolor imperdiet animi nam sint dolore dolore in id.</p>
+                                <h2>Initial Research</h2>
+                                <p><strong>Goal:</strong> Learn about spatial deixis and dashboard design.
+                                <br><strong>What I did:</strong> I did a lot of researching into the different types of deixis (person, spatial, temporal), the accessibilty challenges they present (reliance on visual references, missing context, poor audio or video quality), 
+                                and general dashboard design. I learned the primary goals for the dashboard and the project as a whole: flag problematic phrases, provide suggestions for improvement, and give professors a way to track their progress over time. 
+                                I collected multiple reference dashboards and chart patterns to inform the design of the Clarity Coach dashboard.
+                                <br><strong>What it shaped:</strong> A set of clear design principles for the dashboard</p>
+                                <ul class="phase-findings">
+                                    <li><strong>Keep it simple:</strong> Professors are busy, so the dashboard should be easy to use and understand.</li>
+                                    <li><strong>Make it actionable:</strong> The dashboard should provide clear suggestions for improvement and a way to track progress over time.</li>
+                                    <li><strong>Make it accessible:</strong> The dashboard should be accessible to all users, including those with disabilities.</li>
+                                </ul>
+                                <div class="phase-images">
+                                    <figure class="phase-figure">
+                                        <img src="assets/dashboard analysis.png" alt="FigJam board with reference dasboards and notes" class="phase-image">
+                                    </figure>
+                                </div>
                             </div>
                         </div>
                     </li>
@@ -89,10 +104,16 @@
                         </div>
                         <div class="phase-card">
                             <div class="phase-content">
-                                <h2>Phase Title</h2>
-                                <p>Lorem ipsum dolor sit amet consectetur adipiscing elit occaecat sunt. Blanditiis nostrud incididunt possimus quis nulla minus libero laboris et deserunt nam in. Eos enim rerum quibusdam qui iusto commodo. Esse fugiat dolore nihil occaecat in. Omnis et dolor imperdiet animi nam sint dolore dolore in id.</p>
+                                <h2>Task flows and Design Structure</h2>
+                                <p><strong>Goal:</strong> Decide the key task instructors would need to accomplish, and how to best organize the information.
+                                <br><strong>What I did:</strong> I defined three core task flows: uploading lectures, review a past lecture, and learn about deictic language.
+                                I paired these task flows with a written wireframe outline for a home dashboard, a lecture analysis page, and a lecture history page.</p>
+                            </div> 
+                            <div class="phase-images">
+                                <figure class="phase-figure">
+                                    <img src="assets/task flows and outline.png" alt="FigJam board with reference dasboards and notes" class="phase-image">
+                                </figure>
                             </div>
-                            <img src="placeholder.jpg" alt="Phase Image" class="phase-image">
                         </div>
                     </li>
 
@@ -103,25 +124,127 @@
                         </div>
                         <div class="phase-card">
                             <div class="phase-content">
-                                <h2>Phase Title</h2>
-                                <p>Lorem ipsum dolor sit amet consectetur adipiscing elit occaecat sunt. Blanditiis nostrud incididunt possimus quis nulla minus libero laboris et deserunt nam in. Eos enim rerum quibusdam qui iusto commodo. Esse fugiat dolore nihil occaecat in. Omnis et dolor imperdiet animi nam sint dolore dolore in id.</p>
+                                <h2>Mid-Fidelity Wireframes and Early Feedback</h2>
+                                <p><strong>Goal:</strong> Build the intial wireframes and get feedback from the research team.
+                                <br><strong>What I did:</strong> I built a basic greyscale wireframe for the home dashboard, lecture history, upload,
+                                and lecture analysis (video, transcript, flagged instances, and data metrics) Early critiques from my research team clarified information
+                                that was later on improved.
+                                <br><strong>What changed from feedback:</strong></p>
+                                <ul class="phase-findings">
+                                    <li>Renamed and reordered navigation (kept "Analyze New Lecture," and added "History" for past lectures).</li>
+                                    <li>Labeled chart lines and added comparison to other instructors.</li>
+                                    <li>Added a visual example to the learning content, such as a video.</li>
+                                    <li>Made the false-positive option clearer.</li>
                             </div>
-                            <img src="placeholder.jpg" alt="Phase Image" class="phase-image">
+                            <div class="phase-images">
+                                <figure class="phase-figure">
+                                    <img src="assets/dashboard mid fi.png" alt="Greyscale mid-fi dashboard screens including home, upload, history, and lecture analysis" class="phase-image">
+                                </figure>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="phase-item">
+                        <div class="phase-marker">
+                            <span class="phase-label">Phase</span>
+                            <span class="phase-number">3</span>
+                        </div>
+                        <div class="phase-card">
+                            <div class="phase-content">
+                                <h2>First Hi-Fi Iteration</h2>
+                                <p><strong>Goal:</strong> Make the dashboard feel credible and easy for faculty to follow.
+                                <br><strong>What I did:</strong> I applied UCI branding (blue and gold) to look professional and reduce cognitive load. I went through many "polish" iterations fixing whitespace, 
+                                margins, alignment, and border radius issues, as well as made the chart and button elements clearer. I rethought the home page elements to show this month's references, last lecture, and department rank.
+                                At some point during design, I even included a chat panel to give faculty a way to learn about spatial deixsis more conveniently. Furthermore, I created an explicit "Report Issues" component to send feedback for false positives.
+                                <br><strong>Key feedback:</strong></p>
+                                <ul class="phase-findings">
+                                    <li>Avoided red for "more references," because it implied failure rather than something to review.</li>
+                                    <li>Added customizable time frames after thinking through how often instructors would check the dashboard.</li>
+                                    <li>Made flagged items directly manipulable instead of buried in menus</li>
+                                </ul>
+                            </div>
+                                <figure class="phase-figure">
+                                    <img src="assets/hi fi ver 1.png" alt="Blue and gold dashboard showing lecture analytics" class="phase-image">
+                                </figure>  
+                        </div>
+                    </li>
+
+                    <li class="phase-item">
+                        <div class="phase-marker">
+                            <span class="phase-label">Phase</span>
+                            <span class="phase-number">4</span>
+                        </div>
+                        <div class="phase-card">
+                            <div class="phase-content">
+                                <h2>Usability Testing Round 1</h2>
+                                <p><strong>Goal:</strong> Find out whether instructors understood the dashboard and trusted the numbers.
+                                <br><strong>What I did:</strong> I presented the first hi-fi prototype to 3 different professors and 1 industry professional to get feedback.
+                                These tests were very unstructured as it was not only my first time running usability tests, but I also wanted to get raw feedback on simply the design itself.
+                                <br><strong>Common themes from the feedback:</strong></p>
+                                <ul class="phase-findings">
+                                    <li><strong>Motivation and encouragement:</strong> Users wanted positive feedback and examples of good phrasing, not only problems.</li>
+                                    <li><strong>Clarity of language:</strong> Terms were too technical, so I added hover definitions and plain-language labels.</li>
+                                    <li><strong>Misleading signals:</strong> A rising number suggested improvement when it meant more references, so I reworked how change is shown.</li>
+                                    <li><strong>Missing context:</strong> Questions arose about the time frame, how the department average is calculated, and whether lecture length affects accuracy.</li>
+                                    <li><strong>Easier upload:</strong> I thought about trying to use YuJa Lumina as many professors already have lecture recordings set up and automatically uploaded to the platform.</li>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="phase-item">
+                        <div class="phase-marker">
+                            <span class="phase-label">Phase</span>
+                            <span class="phase-number">5</span>
+                        </div>
+                        <div class="phase-card">
+                            <div class="phase-content">
+                                <h2>Usability Testing Round 2</h2>
+                                <p><strong>Goal:</strong> Learn whether instructors could navigate the deployed site, understand its data, and see value in it.
+                                <br><strong>What I did:</strong> I helped run 9 one-on-one, think-aloud interview sessions with UCI instructors (Computer Science, data, informatics, and math) on the official deployed site. 
+                                The site was developed under an older iteration of my mockups, but this time using actual data from real recorded lectures. Each session followed four tasks (upload a lecture, read the results, 
+                                interpret a flagged instance, find progress over time), then an interview and a short System Usability Scale survey.
+                                <br><strong>What worked:</strong></p>
+                                <ul class="phase-findings">
+                                    <li>The explanations and suggested rephrasings landed well. Several participants called them useful or "really nice," and most agreed with the flags they examined.</li>
+                                    <li>Most understood the tool quickly and would be able to describe it accurately to a colleague.</li>
+                                    <li>The timeline bars on the video, clickable timestamps, and highlighted transcript were praised.</li>
+                                </ul>
+                                <p><strong>What didn't work:</strong></p>
+                                <ul class="phase-findings">
+                                    <li><strong>Duplicate charts:</strong> Four participants said the home page's line chart and bar chart showed the same information under different names.</li>
+                                    <li><strong>Hard-to-find features:</strong>Several missed the flagged references list (placed below the transcript), and five missed or misread the "report incorrect flag" control, including confusion over the green-to-red state.</li>
+                                    <li><strong>Navigation:</strong>Five went to "My Lectures" before Home when asked for aggregate progress, and one needed guidance to find Analyze New Lecture."</li>
+                                    <li><strong>Adoption:</strong> Some questioned the motivation and effort involved, especially without a blind or low-vision student in class.</li>
+                                </ul>
+                            </div>
                         </div>
                     </li>
 
                     <li class="phase-item">
                         <div class="phase-marker" style="border-color: #FFC663;">
                             <span class="phase-label">Phase</span>
-                            <span class="phase-number" style="color: #FFC663;">3</span>
+                            <span class="phase-number" style="color: #FFC663;">7</span>
                         </div>
                         <div class="phase-card">
                             <div class="phase-content">
-                                <h2>Phase Title</h2>
-                                <h3>[Phase Status]</h3>
-                                <p>Lorem ipsum dolor sit amet consectetur adipiscing elit occaecat sunt. Blanditiis nostrud incididunt possimus quis nulla minus libero laboris et deserunt nam in. Eos enim rerum quibusdam qui iusto commodo. Esse fugiat dolore nihil occaecat in. Omnis et dolor imperdiet animi nam sint dolore dolore in id.</p>
+                                <h2>Hi-Fi Version 2 and Next Steps</h2>
+                                <h3>Study Pending</h3>
+                                <p><strong>Goal:</strong> Fix what testing revealed and make the product easier to use at a glance.
+                                <br><strong>What changed:</strong></p>
+                                <ul class="phase-findings">
+                                    <li><strong>Readjusted data visualizations:</strong> A single trend chart (references per lecture) and moved the word cloud/bar chart from the lecture analysis to the home page to show overall phrases.</li>
+                                    <li><strong>A course selector</strong> lets instructors filter by class.</li>
+                                    <li><strong>Clearer navigation labels:</strong> "Analyze New Lecture" became "Upload" and "My Lectures" became "History."</li>
+                                    <li><strong>Chatbot:</strong> Reactions were mixed, from "very helpful" to "would not use,"" and some distrusted chatbots in general</li>
+                                </ul>
+                                <p><strong>What's next?</strong> Currently, a study is the goal for Winter 2027, aiming to get a handful of instructors to use the platform over multiple weeks to see if they experience any improvement. 
+                                    Version 2 is the latest design but has not yet been tested until the upcoming study.</p>
                             </div>
-                            <img src="placeholder.jpg" alt="Phase Image" class="phase-image">
+                            <div class="phase-images">
+                                <figure class="phase-figure">
+                                    <img src="assets/hi fi ver 2.png" alt="Updated blue and gold dashboard with new layout" class="phase-image">
+                                </figure>
+                            </div>
                         </div>
                     </li>
                 </ol>
